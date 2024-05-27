@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Gradient Descent</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: #F3EFEF;
+			font-family: 'Lato', sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #444444;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+
+		h1 {
+			font-size: 48px;
+			font-weight: 700;
+			color: #6B4E4E;
+			margin: 0 0 40px 0;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			color: #444444;
+			margin: 0 0 20px 0;
+		}
+
+		.equation {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #F9F9F9;
+			padding: 20px;
+			border-radius: 4px;
+			margin-bottom: 20px;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.equation span {
+			font-size: 28px;
+			color: #6B4E4E;
+		}
+
+		.main {
+			flex: 3;
+			padding: 20px;
+		}
+
+		.sidebar {
+			position: fixed;
+			top: 0;
+			left: -300px;
+			width: 300px;
+			height: 100%;
+			padding: 20px;
+			background-color: #f8f8f8;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+			z-index: 1;
+		}
+
+		.sidebar.open {
+			left: 0;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			margin: 10px 0;
+		}
+
+		a {
+			color: #555;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+
+		a:hover {
+			color: #333;
+			text-decoration: underline;
+		}
+
+		.menu-icon {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
+			z-index: 2;
+		}
+
+		.menu-icon span {
+			display: block;
+			width: 30px;
+			height: 4px;
+			background-color: #555;
+			margin: 5px 0;
+			transition: all 0.3s ease;
+		}
+
+		.menu-icon.open span:nth-child(1) {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+
+		.menu-icon.open span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.menu-icon.open span:nth-child(3) {
+			transform: rotate(-45deg) translate(7px, -6px);
+		}
+	</style>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body>
+	<div class="menu-icon" onclick="toggleSidebar()">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="container">
+		<h1>Gradient Descent</h1>
+		<p>
+			Gradient Descent is a widely used optimization algorithm in machine learning and deep learning. It is used
+			to minimize the cost function of a model by iteratively adjusting the model's parameters in the direction of
+			steepest descent.
+		</p>
+		<p>
+			The basic idea behind Gradient Descent is to calculate the gradient of the cost function with respect to the
+			model's parameters and use this gradient to update the parameters in a way that minimizes the cost function.
+			The gradient is calculated using the partial derivative of the cost function with respect to each parameter.
+			The update rule for the parameters is given by:
+		</p>
+		<div class="equation">
+			<span>\(\theta_{i+1} = \theta_i - \alpha \frac{\partial J(\theta_i)}{\partial \theta_i}\)</span>
+		</div>
+		<p>
+			Here, \(\theta_i\) is the vector of parameters at iteration \(i\), \(\alpha\) is the learning rate (a
+			hyperparameter that controls the size of the parameter updates), and \(J(\theta_i)\) is the cost function.
+			The update rule tells us to subtract the product of the learning rate and
+			the gradient of the cost function from the current parameter values to obtain the new parameter values.
+		</p>
+		<p>
+			The learning rate is an important hyperparameter in Gradient Descent. If the learning rate is too small, the
+			optimization process may be slow and may get stuck in local minima. If the learning rate is too large, the
+			optimization process may be unstable and may overshoot the optimal parameter values. Choosing an appropriate
+			learning rate is therefore important for the success of Gradient Descent.
+		</p>
+		<p>
+			There are several variants of Gradient Descent that have been developed to address some of its shortcomings.
+			For example, Stochastic Gradient Descent (SGD) updates the parameters based on the gradient of a randomly
+			selected subset (or "batch") of the training data, rather than the entire dataset. This can lead to faster
+			convergence and better generalization. Another variant is Mini-batch Gradient Descent, which updates the
+			parameters based on the gradient of a small subset of the training data, typically 10 to 100 examples at a
+			time.
+		</p>
+		<p>
+			In conclusion, Gradient Descent is a powerful optimization algorithm that is widely used in machine learning
+			and deep learning. Its variants, such as Stochastic Gradient Descent and Mini-batch Gradient Descent, have
+			been developed to address some of its shortcomings and to make it more efficient and effective. By
+			iteratively adjusting the model's parameters in the direction of steepest descent, Gradient Descent can help
+			to minimize the cost function and improve the performance of the model.
+		</p>
+		<div class="sidebar" id="sidebar">
+			<h3>Links</h3>
+			<ul>
+				<li><a href="#">Visualization</a></li>
+				<li><a href="steps.html">Go back to Steps</a></li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		function toggleSidebar() {
+			document.getElementById("sidebar").classList.toggle("open");
+		}
+	</script>
+	</div>
+
+</body>
+
+</html>

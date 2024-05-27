@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translucent Box</title>
+	<style>
+		body {
+			background-color: black;
+			color: rgb(128, 38, 28);
+			margin: 0;
+			padding: 0;
+		}
+		
+		.translucent-box {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(182, 47, 47, 0.5);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+		}
+		
+		.box-content {
+			background-color: rgb(246, 228, 175);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(245, 224, 170, 0.5);
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		
+		.close-icon {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;
+			font-size: 24px;
+			color: #161212;
+		}
+		
+		.page-content {
+			display: none;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="translucent-box">
+		<div class="box-content">
+			<span class="close-icon">&times;</span>
+			<h1>Welcome to my page</h1>
+			<p>This is a demo of a translucent box that appears when the page is loaded.</p>
+		</div>
+	</div>
+	<div class="page-content">
+		<h1>This is the true content of the page</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non justo non ante eleifend blandit. Sed et massa ut odio lobortis vestibulum eu ut purus. Pellentesque vel turpis libero. </p>
+	</div>
+	<script>
+		// Get the elements we need
+		const translucentBox = document.querySelector('.translucent-box');
+		const closeIcon = document.querySelector('.close-icon');
+		const pageContent = document.querySelector('.page-content');
+		
+		// When the close icon is clicked, hide the translucent box and show the true content
+		closeIcon.addEventListener('click', () => {
+			translucentBox.style.display = 'none';
+			pageContent.style.display = 'block';
+		});
+	</script>
+</body>
+</html>

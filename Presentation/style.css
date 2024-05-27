@@ -1,0 +1,108 @@
+body {
+	background-image: url("https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149157312.jpg");
+	background-size: cover;
+	color: #ffffff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+        padding: 20px;
+        text-align: center;
+        margin-top: 150px;
+        border-bottom: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+    
+  }
+
+nav {
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 10px;
+	margin-top: 250px;
+  }
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+nav li:last-child {
+    margin-right: 0;
+  }
+  
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+nav a:hover {
+    color: #c5c6c7;
+  }
+  
+  
+nav a:hover {
+    color: #c5c6c7;
+  }
+
+
+
+
+
+
+/* Main text */
+
+h1 {
+	font-size: 50px;
+	margin: 0;
+}
+
+main {
+	margin: 20px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+
+p {
+	margin: 0 0 20px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+footer {
+	background-color: #1a1a1a;
+	color: #b3b3b3;
+	padding: 20px;
+	text-align: center;
+}
+

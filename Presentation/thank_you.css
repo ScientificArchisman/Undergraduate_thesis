@@ -1,0 +1,25 @@
+body {
+    font-family: "Oswald", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15vmin;
+  }
+  body h1 {
+    font-size: 25em;
+    background-image: url("https://assets.codepen.io/2970881/kassandras__vibrant_flower_pattern_colorful_6f2e398e-b0b7-433f-830e-2e297f9c9f93.png");
+    color: #fff;
+    color: transparent;
+    background-size: contain;
+    -webkit-background-clip: text;
+    filter: drop-shadow(0px -3px 1px black);
+    animation: stripes 5s infinite alternate;
+  }
+  
+  @keyframes stripes {
+    100% {
+      background-position: 100px 0, 100px 0, 100px 0;
+    }
+  }

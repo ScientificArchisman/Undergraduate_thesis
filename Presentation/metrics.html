@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Model Metrics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F5DEB3;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+
+
+
+        .main {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            flex-grow: 1;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2E86C1;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2E86C1;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        td {
+            font-weight: normal;
+        }
+
+        .metric-value {
+            font-size: 2em;
+        }
+
+        .green {
+            color: #2ECC71;
+        }
+
+        .red {
+            color: #E74C3C;
+        }
+
+        .confusion-matrix {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .confusion-matrix img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .line {
+            height: 2px;
+            background-color: #ddd;
+            margin: 20px 0
+        }
+
+        .box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            background-color: #2f3640;
+            transition: all 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 25px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger:hover {
+            transform: scale(1.2);
+        }
+
+        
+
+        /* @media only screen and (max-width: 768px) {
+            .sidebar {
+                left: -100%;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .main {
+                margin: 0;
+            }
+
+            .header {
+                flex-direction: column;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .box {
+                margin: 0 0 20px 0;
+            } */
+        
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="sidebar">
+            <ul>
+                <li><a href="https://tensorboard.dev/experiment/Zk18tMbrQgahP9vz3zWm2Q/">Visualization</a></li>
+                <li><a href="model_metrices_decription.html">Meaning of metrices</a></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <button class="hamburger">&#9776;</button>
+        </div>
+    </body>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="hamburger" onclick="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <h1>Model Metrics</h1>
+                <div class="hamburger" onclick="toggleSidebar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Metrics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Accuracy</td>
+                            <td class="metric-value green">0.9890</td>
+                        </tr>
+                        <tr>
+                            <td>Precision</td>
+                            <td class="metric-value red">0.9891</td>
+                        </tr>
+                        <tr>
+                            <td>Recall</td>
+                            <td class="metric-value green">0.9889</td>
+                        </tr>
+                        <tr>
+                            <td>F1 Score</td>
+                            <td class="metric-value red">0.9890</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box">
+                <h2>Detailed Classification Report</h2>
+                <div class="confusion-matrix">
+                    <img src="images/classification_report.png" alt="Classification report">
+                </div>
+            </div>
+            <div class="box">
+                <h2>Confusion Matrix</h2>
+                <div class="confusion-matrix">
+                    <img src="images/conf_matrix.jpg" alt="Confusion Matrix">
+                </div>
+            </div>
+            <!-- <div class="line"></div>
+            <div class="box">
+                <h2>Analysis</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id leo eget odio eleifend lobortis nec
+                    non velit. Pellentesque aliquam elit in elit vestibulum interdum. Sed blanditet justo euismod, at
+                    hendrerit neque interdum. Nullam suscipit convallis nulla, sed bibendum odio sollicitudin quis.
+                    Etiam convallis elit quis velit cursus, ac suscipit leo fringilla. Nullam euismod tellus eu nibh
+                    dictum venenatis. Nam eu justo eget enim consectetur tristique. Pellentesque lobortis felis sit amet
+                    augue mollis, eu blandit ipsum bibendum. Nunc id odio pharetra, elementum lacus in, ultrices sem.
+                    Aenean lobortis lacus eget quam euismod, at feugiat sapien consectetur. Aliquam ullamcorper euismod
+                    feugiat. Fusce faucibus vitae libero vel finibus. Vivamus mattis dignissim orci ac tincidunt.</p>
+            </div>
+        </div> -->
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const sidebar = document.querySelector(".sidebar");
+
+        hamburger.addEventListener("click", function () {
+            sidebar.classList.toggle("show");
+        });
+
+    </script>
+</body>
+
+</html>

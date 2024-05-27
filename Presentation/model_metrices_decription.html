@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Performance Metrics</title>
+    <style>
+        body {
+            background-color: #f7ec97;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .metric-container {
+            background-color: #ece9b976;
+            border: 1px solid #c4bd39;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .metric-container h2 {
+            margin-top: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #DDDDDD;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        code {
+            background-color: #F5F5F5;
+            border: 1px solid #CCCCCC;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            font-size: 14px;
+            padding: 2px 5px;
+        }
+
+        .equation {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .back-btn-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #F8D8D8;
+            color: #444;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .back-btn:hover {
+            background-color: #FF7F7F;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Performance Metrics</h1>
+        <div class="metric-container">
+            <h2>Accuracy</h2>
+            <p>Accuracy is the proportion of correctly classified instances out of all instances.</p>
+            <p class="equation">$$\frac{TP + TN}{TP + TN + FP + FN}$$</p>
+        </div>
+
+        <hr>
+
+        <div class="metric-container">
+            <h2>Precision</h2>
+            <p>Precision is the proportion of true positives out of all positive predictions.</p>
+            <p class="equation">$$\frac{TP}{TP + FP}$$</p>
+        </div>
+
+        <hr>
+
+        <div class="metric-container">
+            <h2>Recall</h2>
+            <p>Recall is the proportion of true positives out of all actual positives.</p>
+            <p class="equation">$$\frac{TP}{TP + FN}$$</p>
+        </div>
+
+        <hr>
+
+        <div class="metric-container">
+            <h2>F1 Score</h2>
+            <p>The F1 score is the harmonic mean of precision and recall, and is a useful metric when there is an uneven
+                class distribution (i.e. when some classes have many more instances than others).</p>
+            <p class="equation">$$2 \times \frac{\text{precision} \times \text{recall}}{\text{precision} +
+                \text{recall}}$$</p>
+        </div>
+
+        <hr>
+
+
+    </div>
+    <a href="https://www.example.com" class="back-btn">Back to Machine Learning</a>
+    <a href="metrics.html" class="back-btn">Back to Deep learning</a>
+
+</body>
+
+</html>

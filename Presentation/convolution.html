@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Convolution Presentation</title>
+  <link rel="stylesheet" type="text/css" href="convolution_css.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="https://scientificarchisman-dissertaton-convolution2-oqs9jf.streamlit.app/" target="_blank">Open
+              Streamlit App</a></li>
+          <li><a href="convolution_maths.html">3D Convolution</a></li>
+          <li><a href="model.html">Deep Learning model</a></li>
+          <li><a href="idea.html"> A Change of Idea</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <section>
+      <h2>What is Convolution?</h2>
+      <hr>
+      <p>Convolution is a mathematical operation that is commonly used in signal processing and image processing to
+        extract features from signals and images. The basic idea behind convolution is to slide a small matrix, called a
+        kernel, over a larger matrix, called an input matrix, and calculate a dot product between the kernel and the
+        portion of the input matrix that the kernel is currently overlaid on.</p>
+      <p>Here is a visual representation of the convolution operation:</p>
+      <img src="gif/no_padding_no_strides.gif" alt="Convolution Operation" class="center" height="1000px">
+
+      <h2>Applications of Convolution</h2>
+      <hr>
+      <p>Convolution is used in many different applications, including:</p>
+      <ul>
+        <li>Image processing</li>
+        <li>Signal processing</li>
+        <li>Computer vision</li>
+        <li>Natural language processing</li>
+        <li>Deep learning</li>
+      </ul>
+
+      <h2>Padding and Strides</h2>
+      <hr>
+      <p>Padding refers to the addition of extra pixels around the border of an image, which allows us to preserve the
+        spatial dimensions of the input image when we apply convolutional filters. This is important because
+        convolutional filters tend to reduce the spatial dimensions of an image, which can lead to loss of
+        information. Padding can also help to reduce the amount of information lost at the edges of an image,
+        which can be particularly important for objects or features that are located near the edges.</p>
+
+      <p> Strides, on the other hand, refer to the step size that we use when we slide the
+        convolutional filters over the input image. A larger stride will result in a smaller output size,
+        while a smaller stride will result in a larger output size. Strides are important because they can
+        affect the receptive field of the convolutional filters, which in turn can affect the ability of
+        the model to capture different features at different scales. Choosing the appropriate stride is
+        an important consideration when designing a convolutional neural network.</p>
+    </section>
+
+
+
+
+    <div class="gif-container">
+      <span class="text">Full Padding and No Strides</span>
+
+      <img src="gif/full_padding_no_strides.gif" alt="GIF" class="gif">
+    </div>
+
+    <div class="gif-container">
+      <span class="text">No padding strides</span>
+
+      <img src="gif/no_padding_strides.gif" alt="no padding strides" class="gif">
+    </div>
+
+    <div class="gif-container">
+      <span class="text">Same Padding, No Strides</span>
+
+      <img src="gif/same_padding_no_strides.gif" alt="Same Padding, No Strides" class="gif">
+    </div>
+    <div>
+      <a href="https://tensorboard.dev/experiment/Zk18tMbrQgahP9vz3zWm2Q/" class="button">See Deep Learning model</a>
+      <a href="convolution_filtering.html" class="button">Convolution Filtering</a>
+      <a href="cnn.html" class="button">Convolution Neural Network</a>
+    </div>
+
+
+  </main>
+
+
+  <hr>
+  
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+body {
+	background-image: url("https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149157312.jpg");
+	background-size: cover;
+	color: #ffffff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+/* Header styles */
+header {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    margin-bottom: 50px;
+  }
+  
+nav {
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 1px;
+  }
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+nav li:last-child {
+    margin-right: 0;
+  }
+  
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+nav a:hover {
+    color: #c5c6c7;
+  }
+  
+  
+nav a:hover {
+    color: #c5c6c7;
+  }
+  
+  /* Main content styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+  }
+  
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: -20px;
+  }
+  
+p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .name-holders-container {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+
+  }
+  
+  .name-holder {
+    position: relative;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    z-index: 1;
+    object-fit: cover;
+
+  }
+  
+  .upper-right {
+    top: 20px;
+    right: 20px;
+    z-index: inherit;
+    z-index: inherit;
+    object-fit: cover;
+  }
+  
+  .center-left {
+    top: 50%;
+    left: 20px;  
+    transform: translate(-5%, -40%);
+    z-index: inherit;
+    object-fit: cover;
+
+  }
+
+  
+  .lower-right {
+    bottom: 20px;
+    right: 20px;
+    z-index: inherit;
+    object-fit: cover;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    object-fit: cover;
+
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: 0px; /* Adjust this value as needed to position the image correctly */
+
+  }
+  
+
+
+  

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Subprocesses of Training a Machine Learning Model</title>
+  <style>
+    /* Fonts */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+    }
+
+    h1,
+    h2 {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Styles */
+    body {
+      background-color: #f5f5dc;
+    }
+
+    .section {
+      margin: 50px 0;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .step {
+      margin: 50px 0;
+      display: flex;
+    }
+
+    .step-header {
+      background-color: #f5f5dc;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+      flex-basis: 30%;
+      align-self: flex-start;
+      cursor: pointer;
+    }
+
+    .step-description {
+      padding: 10px;
+      border-radius: 0 0 5px 5px;
+      background-color: #fff;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      flex-basis: 70%;
+      align-self: flex-end;
+    }
+
+    .placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      background-color: #ccc;
+      border-radius: 10px;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    .placeholder:hover {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    .placeholder img {
+      max-width: 100%;
+      max-height: 100%;
+
+    }
+
+    .gif-container {
+      display: inline-block;
+      width: 400px;
+      height: 100px;
+      margin-left: 30px;
+      margin-bottom: 0px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gif-image {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 10;
+      left: 0;
+      display: none;
+    }
+
+    .my-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .my-button:hover {
+      background-color: #3e8e41;
+    }
+    .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: #fff;
+	background-color: #333;
+	padding: 20px 40px;
+	margin: 20px;
+	border-radius: 20px;
+	text-decoration: none;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+		<a href="https://tensorboard.dev/experiment/Zk18tMbrQgahP9vz3zWm2Q/" target="_blank">Model Interactive Structure</a>
+		<a href="model_static_structure.html" target="_blank">Model Static structure</a>
+		<a href="model_description.html" target="_blank">Model Summary</a>
+		<a href="metrics.html" target="_blank">Model Metrics</a>
+	</div>
+  <h1 style="text-align:center;" onclick="window.open('images/forward_prop.png')">Subprocesses of Training a Machine
+    Learning Model</h1>
+
+
+  <div class="section">
+    <h2 onclick="window.open('images/forward_prop.png')">Forward Propagation</h2>
+    <div class="step">
+      <div class="step-header" onclick="window.open('gif/forward_prop.gif')">Neural Network</div>
+      <div class="step-description">
+        The neural network takes in the input data and performs a series of calculations to generate a predicted output.
+        This involves multiplying the input data by weights (which are initialized randomly) and applying activation
+        functions.
+      </div>
+    </div>
+    <center><img src="images/eqn_in_forward_prop.png" alt="centered image"> </center>
+  </div>
+
+
+  <div class="section">
+    <h2 onclick="window.open('images/ce_loss.png')">Loss Calculation</h2>
+    <div class="step">
+      <div class="step-header" onclick="window.open('images/cross_entropy.png')">Loss Function</div>
+      <div class="step-description">
+        The loss function measures the difference between the predicted output and the true output. Common loss
+        functions include mean squared error, cross-entropy, and binary cross-entropy.
+      </div>
+    </div>
+    <center><img src="images/ce_loss_calc.webp" alt="centered image"> </center>
+  </div>
+
+
+
+
+  <div class="section">
+    <h2 onclick="window.open('images/back_prop.jpg')">Backward Propagation</h2>
+    <div class="step">
+      <div class="step-header" onclick="window.open('gif/backprop.gif')">Gradient Calculation</div>
+      <div class="step-description">
+        The gradient of the loss function with respect to the model parameters is calculated using the chain rule of
+        calculus. This involves computing the partial derivatives of the loss with respect to each parameter.
+      </div>
+    </div>
+    <center><img src="gif/back_prop.gif" alt="centered image" height="500px"> </center>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="gradient_descent.html" target="_blank"><button class="my-button">The great Gradient Descent</button></a>
+  </div>
+
+
+  <div class="section">
+    <h2 onclick="window.open('https://www.example.com/parameter-update')">Parameter Update</h2>
+    <div class="step">
+      <div class="step-header" src="window.open('https://www.example.com/optimization-algorithm')">Optimization
+        Algorithm</div>
+      <div class="step-description">
+        The model parameters are updated using an optimization algorithm such as gradient descent. Gradient descent
+        adjusts the parameters in the direction of the negative gradient of the loss function, with the goal of
+        minimizing the loss.
+      </div>
+    </div>
+    <div class="placeholder" onclick="window.open('https://www.example.com/parameter-update-gif')"></div>
+  </div>
+
+  <div class="section">
+    <h2>Repeat</h2>
+    <div class="step">
+      <div class="step-header" onclick="window.open('https://www.example.com/epochs')">Looping</div>
+      <div class="step-description">
+        The previous steps (forward propagation, loss calculation, backward propagation, and parameter update) are
+        repeated multiple times, with different batches of input data (in batch training) or individual samples of input
+        data (in stochastic training). This process is known as an epoch, and the number of epochs is a hyperparameter
+        that can be tuned to improve model performance.
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

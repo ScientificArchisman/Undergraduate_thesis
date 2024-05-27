@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convolution Operation</title>
+  <link rel="stylesheet" type="text/css" href="conv_fil_css.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+</head>
+<div class="link-container">
+    <ul>
+      <li><a href="cnn.html">Convolutional Neural Network</a></li>
+      <li><a href="convolution_filter_res.html">Visualizations</a></li>
+      <li><a href="gustaffson.html">Gustaffson's Method</a></li>
+    </ul>
+</div>
+<body>
+  <div class="container">
+  <h1>Convolution Filtering</h1>
+  
+  <p>The convolution operation is a mathematical operation used in signal processing, image processing, and other fields. It involves combining two functions to produce a third function that represents how one of the original functions is modified by the other.</p>
+  
+  
+  <h2>Convolution in Image Processing</h2>
+  
+  <p>In image processing, convolution is used to apply filters or kernels to images. The kernel is a small matrix of numbers that is slid over the image, and at each position, the kernel is multiplied element-wise with the image pixels that it covers. The products are then summed up, and the result is used as the new value for the center pixel of the kernel. This process is repeated for every position in the image, resulting in a new image with filtered pixel values.</p>
+  
+  <p>The convolution operation in image processing can be written as:</p>
+  
+  <div class="equation">
+    \(I'(x, y) = \sum_{i=-1}^{n} \sum_{j=-1}^{m} K(i,j) I(x-i, y-j)\)
+  </div>
+  
+  <p>where \(I\) is the input image, \(I'\) is the output image, \(K\) is the kernel or filter, and \((x,y)\) are the coordinates of the pixel being processed.</p>
+  
+</div>
+
+  <div class="container">
+    <h1>Convolution Filtering with Hanning Window</h1>
+    
+    <p>Convolution filtering is a widely used technique in digital signal processing and image processing for a variety of applications such as smoothing, sharpening, edge detection, and more. One important aspect of convolution filtering is the choice of window function, which can have a significant impact on the quality of the output image.</p>
+    
+    <h2>Hanning Window</h2>
+    
+    <p>One commonly used window function is the Hanning window, which is a type of cosine window that is used to smooth the signal being filtered. The Hanning window is defined as:</p>
+    
+    <div class="equation">
+      <p>\( w(n) = 0.5 - 0.5 \cos \left( \frac{2\pi n}{N-1} \right)\) </p>
+    </div>
+    
+    <p>where n is the index of the sample, N is the total number of samples, and w(n) is the value of the window function at index n. The Hanning window has the property that it tapers to zero at both ends, which reduces the effects of spectral leakage in the Fourier transform of the signal being filtered.</p>
+    
+    <h2>Convolution Filtering with Hanning Window</h2>
+    
+    <p>To perform convolution filtering with a Hanning window, the input signal is first multiplied element-wise with the Hanning window. The resulting product is then convolved with a desired filter kernel, and the output is obtained by summing the resulting values at each position.</p>
+        
+   
+  
+</body>
+</html>

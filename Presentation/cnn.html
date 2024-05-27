@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Convolutional Neural Network</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Font styles */
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: justify;
+        margin: 20px auto;
+        max-width: 800px;
+      }
+      
+      /* Image styles */
+      .cnn-image {
+        display: block;
+        margin: 50px auto;
+        max-width: 600px;
+      }
+      
+      /* Animation styles */
+      .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+      
+      .fadeIn {
+        animation-name: fadeIn;
+      }
+      .box {
+        border: 10px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      .box a {
+        text-decoration: none;
+        color: #333;
+      }
+      .box a:hover {
+        color: #666;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .gif-container {
+        max-width: 500px;
+        margin: 20px 0;
+      }
+      .gif-container img {
+        max-width: 100%;
+      }
+      /* Decoration styles */
+      .container {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 900px;
+      }
+      
+      .decorative-line {
+        border-bottom: 1px solid #ddd;
+        margin: 40px auto;
+        max-width: 800px;
+      }
+
+      .button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 50px auto;
+        background-color: #ff9900;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #13d619;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container animated fadeIn">
+      <h1>Convolutional Neural Network</h1>
+      <img class="cnn-image" src="images/cnn.jpeg" alt="Convolutional Neural Network Diagram" height="350px">
+      <p>A Convolutional Neural Network (CNN) is a type of neural network commonly used for image and video recognition. It consists of multiple layers that perform various types of image processing and pattern recognition. The first layer is typically a convolutional layer, which applies a set of filters to the input image to detect features such as edges, corners, and textures. The output of this layer is then passed through a pooling layer, which reduces the spatial dimensionality of the data. Subsequent layers may include additional convolutional and pooling layers, as well as fully connected layers that perform classification or regression.</p>
+      <div class="decorative-line"></div>
+      <p>One of the key advantages of CNNs is their ability to learn hierarchical representations of visual information. This allows them to perform complex recognition tasks such as object detection and segmentation. CNNs have been used in a wide range of applications, including self-driving cars, medical imaging, and facial recognition.</p>
+      <div class="decorative-line"></div>
+
+      <div class="box">
+        <h2><a href="gif/conv_layer.gif" target="_blank">Convolutional Layer</a></h2>
+        <div class="gif-container"><a href="gif/conv_layer.gif" target="_blank"><img src="gif/conv_layer.gif" style="display: block; margin: 100px;"></a></div>
+        <p>The convolutional layer is the core building block of a CNN, and consists of a set of learnable filters that are convolved over the input image to produce a set of feature maps. These feature maps capture the presence of certain features in different parts of the image, and are used as inputs to subsequent layers of the network.</p>
+      </div>
+      
+
+      <div class="box">
+        <h2><a href="gif/pooling.gif" target="_blank">Pooling Layer</a></h2>
+        <div class="gif-container"><a href="gif/pooling.gif" target="_blank"><img src="gif/pooling.gif" style="display: block; margin: 50px;"></a></div>
+        <p>The pooling layer is typically placed after the convolutional layer, and downsamples the feature maps produced by the convolutional layer to reduce their spatial dimensions. This reduces the computational complexity of the network and helps to prevent overfitting.</p>
+      </div>
+
+      
+      <div class="box">
+        <h2><a href="images/activation_functions.png" target="_blank">Activation Function Layer</a></h2>
+        <div class="gif-container"><a href="gif/activation.gif" target="_blank"><img src="gif/activation.gif" style="display: block; margin: 50px;"></a></div>
+        <p>The activation function layer applies a non-linear transformation to the output of the previous layer. This helps to introduce non-linearity into the network, allowing it to learn more complex patterns and relationships between the input and output.</p>
+    </div>
+
+      <div class="box">
+        <h2><a href="gif/source.gif" target="_blank">Fully Connected Layer</a></h2>
+        <div class="gif-container"><a href="gif/fully_connected.gif" target="_blank"><img src="gif/fully_connected.gif"  style="display: block; margin: 100px;"></a></div>
+        <p>The pooling layer is typically placed after the convolutional layer, and downsamples the feature maps produced by the convolutional layer to reduce their spatial dimensions. This reduces the computational complexity of the network and helps to prevent overfitting.</p>
+      </div>
+
+    </div>
+
+        <a href="steps.html" class="button">Go to Another Page</a>
+
+
+  </body>
+</html>
+
+

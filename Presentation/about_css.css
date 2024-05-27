@@ -1,0 +1,88 @@
+h1 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+  }
+.about-text {
+    font-size: 400px;
+  }
+
+.about-section {
+    padding: 50px;
+    text-align: justify;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  
+  .about-section h2 {
+    font-size: 400px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .about-section p {
+    font-size: 400px;
+    margin-bottom: 30px;
+  }
+  
+  .about-section .highlight {
+    font-weight: bold;
+    color: #ff9900;
+    font-size: 400px;
+
+  }
+  
+  .about-section .list-item {
+    font-size: 400px;
+
+    margin-bottom: 20px;
+  }
+  
+  .about-section .list-item span {
+    font-size: 400px;
+
+    font-weight: bold;
+  }
+  
+  .about-section .list-item ul {
+    font-size: 400px;
+
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
+  
+  .about-section .list-item li {
+    font-size: 400px;
+
+    margin-bottom: 5px;
+  }
+  
+  .about-section .code-block {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    line-height: 1.5;
+    overflow: auto;
+  }
+  
+  .about-section .code-block pre {
+    margin: 0;
+    font-size: 400px;
+
+  }
+  
+  .about-section .code-block code {
+    color: #ffffff;
+    font-size: 400px;
+
+  }
+  
+  .about-section .code-block .comment {
+    color: #cccccc;
+    font-size: 400px;
+
+  }
+  

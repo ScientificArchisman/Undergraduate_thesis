@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creators2.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nav">	
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="motivation.html">Motivation</a></li>
+            <li> <a href="https://www.kaggle.com/datasets/shayanfazeli/heartbeat">Dataset</a></li>
+            <li> <a href="https://www.example.com">Feature Extraction</a></li>
+            <li> <a href="convolution.html">Convolution</a></li>
+            
+        </ul>
+    </nav>
+    <button id="btn" class="hamburger hamburger--slider" type="button" onClick="toggle();">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="container">
+        <div class="card">
+            <img src="images/93490689.jpeg" alt="Sora" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Archisman Chakraborti</h5>
+                <p class="card-text">Archisman Chakraborti is the main creator 
+                    of this project and is currently pursuing his undergraduate 
+                    degree in physics from the department. 
+
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/IMG-20230412-WA0006.jpg" alt="Umi" class="card-img-top" height="40px">
+            <div class="card-body">
+                <h5 class="card-title">Rama Mishra</h5>
+                <p class="card-text">Rama Mishra is one of the co-authors of our
+                     project on machine learning and deep learning.
+                      She played a crucial role in filtering the data and designing
+                       the CNN architecture that we used in our project. Her expertise 
+                       in these areas was invaluable, and her contributions greatly enhanced
+                        the quality of our work. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" alt="Mori" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Mori</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function toggle() {
+	var nav = document.querySelector("#nav"),
+		btn = document.querySelector("#btn");
+	nav.classList.toggle("open");
+	btn.classList.toggle("is-active");
+}
+</script>
+</html>

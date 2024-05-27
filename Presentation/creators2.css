@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #333;
+}
+
+button {
+	color: #ef8625;
+	background: transparent;
+	border: none;
+	font-family: monospace;
+	text-transform: uppercase;
+	font-size: 20px;
+	padding: 10px 20px;
+}
+
+#nav {
+	position: absolute;
+	border-right: solid 1px #444;
+	z-index: 999;
+	background: #444;
+	width: 200px;
+	height: 100vh;
+	overflow-y: auto;
+	transition-property: transform;
+	transition-duration: .4s;
+	transform: translateX(-770px);
+	cursor: pointer;
+}
+
+#nav.open {
+	transform: translateX(-620px);
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	margin-top: 40px;
+	font-size: 20px;
+	font-family: monospace;
+	color: #ef8625;
+	padding-left: 10px;
+}
+
+#btn {
+	position:absolute;
+	right: 0;
+	top: 0;
+}
+
+
+/* toggle icon css  
+*	url - 
+*/
+
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: #ef8625;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color:  #ef8625;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+.hamburger--slider .hamburger-inner {
+  top: 2px; }
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.2s; }
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px; }
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; }
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg); }
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  background: #333;
+}
+
+.container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .card {
+  margin: 1em;
+}
+.container .card .card-img-top {
+  position: relative;
+  z-index: 2;
+  width: 322px;
+  height: 402px;
+  transform: translateY(52%);
+  transition: 0.5s;
+}
+.container .card .card-body {
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1.25em;
+  height: 220px;
+  background: rgb(144, 128, 128);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.056), 0 6.7px 5.3px rgba(0, 0, 0, 0.081), 0 12.5px 10px rgba(0, 0, 0, 0.1), 0 22.3px 17.9px rgba(0, 0, 0, 0.119), 0 41.8px 33.4px rgba(0, 0, 0, 0.144), 0 100px 80px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.container .card .card-body .card-title {
+  margin: 0 0 0.75em 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.container .card .card-body .card-text {
+  margin: 0 0 1em 0;
+}
+.container .card .card-body .btn {
+  padding: 0.375em 0.75em;
+  color: black;
+  text-decoration: none;
+  line-height: 1.5;
+  border: 1px solid black;
+  border-radius: 0.25em;
+  transition: 0.5s;
+}
+.container .card .card-body .btn:hover {
+  color: rgb(61, 54, 54);
+  background: black;
+}
+.container .card:hover .card-img-top {
+  transform: translateY(2%);
+}
+.container .card:hover .card-body {
+  transform: translateY(0);
+}

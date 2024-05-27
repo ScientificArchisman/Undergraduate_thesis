@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="motivation.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav id="nav">	
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="creators2.html">Creators</a></li>
+            <li> <a href="timeline.html">Timeline</a></li>
+            <li> <a href="https://www.kaggle.com/datasets/shayanfazeli/heartbeat">Dataset</a></li>
+            <li> <a href="https://www.example.com">Feature Extraction</a></li>
+            <li> <a href="convolution.html">Convolution</a></li>
+            
+        </ul>
+    </nav>
+    <button id="btn" class="hamburger hamburger--slider" type="button" onClick="toggle();">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class='screen'>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Increased Cardiovascular Diseases</h1>
+            <p>Cardiovascular disease statistics:
+
+                Cardiovascular disease is the leading cause of death worldwide, accounting for an estimated 17.9 million deaths each year. (World Health Organization)
+            
+                In the United States, cardiovascular disease is responsible for approximately 1 in 3 deaths, or about 655,000 deaths per year. (Centers for Disease Control and Prevention)
+            
+                Coronary heart disease is the most common type of cardiovascular disease, accounting for approximately 45% of
+                 all cardiovascular deaths in the United States. (American Heart Association)</p>
+          </div>
+          <div class='details-1'>
+            <p>Józef Brandt</p>
+          </div>
+          <div class='details-2'>
+            <p>~ 1887 ~</p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Improved Accuracy</h1>
+            <p>AI algorithms can accurately detect abnormalities in ECG readings with high precision, reducing the risk of false positives or false negatives. 
+                This can help to ensure that patients receive timely and appropriate treatment.</p>
+          </div>
+          <div class='details-1'>
+            <p>Hasui Kawase</p>
+          </div>
+          <div class='details-2'>
+            <p>~ 1925 ~</p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Reduced Costs</h1>
+            <p>By automating the ECG detection process, healthcare providers can save time and money on manual analysis and interpretation. 
+                This can help to reduce overall healthcare costs and improve efficiency.</p>
+          </div>
+          <div class='details-1'>
+            <p>Albrecht Dürer</p>
+          </div>
+          <div class='details-2'>
+            <p>~ 1503 ~</p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Increased access</h1>
+            <p>AI-powered ECG analysis can be conducted remotely, allowing patients in remote or underserved areas to receive timely
+                 and accurate diagnoses without having to travel to a healthcare facility.</p>
+          </div>
+          <div class='details-1'>
+            <p>Bernardo Bellotto</p>
+          </div>
+          <div class='details-2'>
+            <p>~ 1780 ~</p>
+          </div>
+        </div>
+      </div>
+</body>
+<script>
+
+$(document).ready(function(){
+    $('.card').click(function(){
+				$(this).find('.details-1, .details-2').toggleClass('unfold').parents('.card').siblings().children('.details-1, .details-2').removeClass('unfold');
+				$(this).toggleClass('span').siblings('.card').removeClass('span');
+    });
+});
+
+
+</script>
+<script>
+    function toggle() {
+	var nav = document.querySelector("#nav"),
+		btn = document.querySelector("#btn");
+	nav.classList.toggle("open");
+	btn.classList.toggle("is-active");
+}
+</script>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gustaffson's Method of Edge Filtering</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<style>
+		body {
+			background-color: #FDF5E6;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.header {
+			background-color: #FFDAB9;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 40px;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.navbar {
+			background-color: #FFE4C4;
+			display: flex;
+			justify-content: center;
+			padding: 10px;
+		}
+
+		.navbar a {
+			color: black;
+			font-size: 20px;
+			font-weight: bold;
+			margin: 0 10px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		.content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 20px;
+		}
+
+		.section {
+			background-color: #FFF8DC;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px grey;
+			margin: 20px;
+			padding: 20px;
+			text-align: justify;
+			width: 800px;
+		}
+
+		.section h2 {
+			font-size: 30px;
+			font-weight: bold;
+			margin-top: 0;
+		}
+
+		.section p {
+			font-size: 20px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		.equation {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 20px 0;
+		}
+
+		.equation p {
+			font-size: 25px;
+			margin: 0;
+			text-align: center;
+		}
+
+		.image {
+			display: flex;
+			justify-content: center;
+			margin: 20px 0;
+		}
+
+		.image img {
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px grey;
+			height: 400px;
+			margin: 10px;
+			width: 400px;
+		}
+        /* Gustaffson's Method Section */
+
+#gustaffson-method {
+  background-color: #f5deb3;
+}
+
+#gustaffson-method h2 {
+  color: #8b4513
+}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Gustaffson's Method of Edge Filtering</h1>
+	</div>
+
+	<div class="navbar">
+		<a href="feature_extraction.html">Feature Extraction</a>
+		
+		<a href="gustaffson_res.html">Results</a>
+	</div>
+
+	<div class="content">
+		<div class="section" id="overview">
+			<h2>Overview</h2>
+			<p>Gustaffson's method of edge filtering is a digital signal processing technique used to remove high frequency noise from signals while preserving sharp transitions or edges. This method is particularly useful in image processing applications where noise reduction is necessary while maintaining edge sharpness. The method was introduced by Gustaffson in 1995 and has since been widely used in various signal processing applications.</p>
+		</div>
+
+		<div class="section" id="methodology">
+            <section id="gustaffson-method" class="section">
+                <div class="container">
+                  <h2>Gustaffson's Method</h2>
+                  <p>Gustaffson's method is a widely used technique for edge filtering. It is based on the idea that edges can be detected by looking for large gradients in the image. The basic idea is to apply a filter to the image that is sensitive to changes in intensity and is relatively insensitive to noise. The filter can be defined in terms of its frequency response:</p>
+                  <div class="equation-container">
+                    <div class="equation">
+                      <span class="equation-number">(1)</span>
+                      <span>\[H(u, v) = \frac{1}{1 + \Big (\frac{D(u, v)}{D_0} \Big)^{2n}}\]</span>
+                    </div>
+                  </div>
+                  <p>where \(D(u, v)\) is the distance from the point \((u, v)\) in the frequency domain to the origin, \(D_0\) is a constant that determines the cut-off frequency, and \(n\) is a positive integer that controls the sharpness of the cut-off.</p>
+                  <p>The filter defined by equation (1) is known as a Butterworth filter. It is commonly used in signal processing and is characterized by its smooth roll-off and its ability to preserve the shape of the signal.</p>
+                  <p>To apply the filter to the image, we first convert the image to the frequency domain using the Fourier transform. We then multiply the Fourier transform of the image by the Fourier transform of the filter. Finally, we convert the filtered image back to the spatial domain using the inverse Fourier transform.</p>
+                  <p>The resulting image will have reduced noise and enhanced edges. However, it may also have some ringing artifacts around the edges, which can be reduced by applying a smoothing filter to the image.</p>
+                  <p>The edge-enhanced image can be obtained by subtracting the original image from the filtered image:</p>
+                  <div class="equation-container">
+                    <div class="equation">
+                      <span class="equation-number">(2)</span>
+                      <span>\[I_e(x, y) = I(x, y) - I_f(x, y)\]</span>
+                    </div>
+                  </div>
+                  <p>where \(I(x, y)\) is the original image, \(I_f(x, y)\) is the filtered image, and \(I_e(x, y)\) is the edge-enhanced image.</p>
+                  <p>Here is the pseudocode for Gustaffson's method:</p>
+                  <pre>
+                    <code>
+              function edge_filter_gustaffson(image):
+                // Convert image to frequency domain
+                F = fourier_transform(image)
+              
+                // Define Butterworth filter
+                H = butterworth_filter(F.shape, D0, n)
+              
+                // Apply filter to image
+                G = F * H
+              
+                // Convert filtered image to spatial domain
+                g = inverse_fourier_transform(G)
+              
+                // Smooth filtered image
+                g = gaussian_filter(g, sigma)
+              
+                // Calculate edge-enhanced image
+                E = image - g
+              
+                return E 
+                    </code>
+                  </pre>
+                </div>
+              </section>
+            </body>
+</html>              
+

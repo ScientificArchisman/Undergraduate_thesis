@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="idea.css">   
+    <title>Change of Idea</title>
+</head>
+<body>
+    <div class="lamp">
+        <div class="lamp__wire"></div>
+        <div class="lamp__bulb">
+          <div class="lamp__bulb__filament">
+            <div class="lamp__bulb__filament__base"></div>
+            <div class="lamp__bulb__filament__tungsten">
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--1"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--2"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--3"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--4"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--5"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--6"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--7"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--8"></div>
+              <div class="lamp__bulb__filament__tungsten__winding lamp__bulb__filament__tungsten__winding--9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="instruction"><span>I</span><span>d</span><span>e</span><span>a<span>!</span></div>
+</body>
+<script>
+    window.onload = function(){
+
+const lamp = document.getElementsByClassName('lamp')[0];
+
+window.addEventListener('click', function(){
+    lamp.classList.toggle('is-on');
+});
+
+};
+</script>
+</html>
